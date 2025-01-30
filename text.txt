@@ -1,0 +1,48 @@
+
+---- 1 ---- Installer PHP 8 manuellement
+Téléchargez PHP 8 :
+Rendez-vous sur le site officiel de PHP : https://www.php.net/downloads.
+Téléchargez la version Windows appropriée (généralement la version "Thread Safe" si vous utilisez Apache ou la version "Non Thread Safe" pour CLI).
+Décompressez PHP :
+Extrayez l'archive téléchargée dans un dossier (par exemple C:\php).
+Ajoutez PHP au PATH :
+Ouvrez Paramètres Windows > Système > À propos > Paramètres avancés du système.
+Cliquez sur Variables d'environnement > Sélectionnez Path dans la liste des variables système > Cliquez sur Modifier.
+Ajoutez le chemin de votre dossier PHP (par exemple, C:\php) dans la liste et validez.
+Configurer le fichier php.ini :
+Copiez le fichier php.ini-development (dans le dossier PHP) et renommez-le en php.ini.
+Ouvrez-le avec un éditeur de texte et configurez les extensions nécessaires (décommentez les lignes appropriées en supprimant le ; au début, par exemple pour extension=mysqli ou extension=curl).
+Testez PHP :
+Ouvrez un terminal (cmd ou PowerShell).
+Tapez php -v pour vérifier que PHP est correctement installé.
+
+
+=> https://getcomposer.org/download/ 
+
+---- 2 ---- INSTALLER COMPOSER
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+
+---- 3 ----INSTALLER SCOOP
+
+https://scoop.sh/
+
+
+---- 4 ----INSTALLER SYMFONT CLI (COMMANDE LINE SYMFONY)
+
+https://symfony.com/download
+
+
+
+---- 5 ----CRÉER LE PROJET SYMFONY
+
+symfony new my_project_directory --version="6.4.*" --webapp
+
+---- 6 ----LANCER LE PROJET SYMFONY 
+
+cd my-project/
+symfony server:start

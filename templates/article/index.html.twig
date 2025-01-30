@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{asset('Gaming_5000x3125.jpg')}}" alt="Card image cap">
+  <div class="card-body">
+    <ul>
+        <li>Titre :{{article.title}} </li>
+        <li>Description :{{article.Description}} </li>
+        <li>Picture : </li>
+        <li>Stock :{{article.stock}} </li>
+        <li>Price :{{article.price}} </li>
+        <li>Category :{{article.category.name}} </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+{% endblock %}
+
+
